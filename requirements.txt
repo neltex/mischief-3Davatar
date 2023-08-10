@@ -1,0 +1,5 @@
+torch
+torchvision
+mediapipe
+opencv-python
+eos-py 

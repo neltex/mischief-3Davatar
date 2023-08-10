@@ -1,5 +1,6 @@
 from flask import Blueprint, request
 from controllers import avatarController
+from services import detectionService
 
 bp = Blueprint('avatar', __name__)
 
@@ -18,3 +19,8 @@ def delete_avatar():
 @bp.route('/update', methods=['PATCH'])
 def update_avatar():
     return avatarController.update_avatar(request)
+
+
+@bp.route('/')
+def index():
+    return "Hello Worldzzz"
