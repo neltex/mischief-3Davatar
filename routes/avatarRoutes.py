@@ -20,7 +20,3 @@ def delete_avatar():
 def update_avatar():
     return avatarController.update_avatar(request)
 
-
-@bp.route('/')
-def index():
-    return "Hello Worldzzz"

@@ -7,7 +7,7 @@ app.register_blueprint(avatarRoutes.bp)
 
 @app.route('/')
 def index():
-    return "Hello Worldzzz"
+    pass 
 
 if __name__ == '__main__':
     app.run()

@@ -1,8 +1,12 @@
 from services import detectionService, morphableModelService, blenderService
+import eos 
 
 def create_avatar(request):
+    # Retrieve image from API call
     image = request.files['image']
-    landmarks = detectionService.detect_landmarks(image)
+    ## Retrieve the landmarks
+    landmarks = detectionService.retrieve_landmarks(image)
+    ## Pass image / landmarks to model.
     model = morphableModelService.create_model(landmarks)
     mesh = blenderService.create_mesh(model)
     # save and return mesh
